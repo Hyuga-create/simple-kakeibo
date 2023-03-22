@@ -1,6 +1,6 @@
 <?php
 include_once('./dbconnect.php');
-include_once('./function.php');
+include_once('./functions.php');
 
 
 $id = $_GET['id'];
@@ -8,7 +8,7 @@ echo $id;
 
 $sql = "SELECT * FROM records WHERE id = :id";
 
-$stmt - $sdo->prepare($sql);
+$stmt = $pdo->prepare($sql);
 
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 $stmt->execute();

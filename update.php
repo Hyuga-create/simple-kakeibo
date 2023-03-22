@@ -8,7 +8,7 @@ $amount = $_POST['amount'];
 $type = $_POST['type'];
 $id = $_POST['id'];
 
-$sql = "UPDATE records SET title = :title, type = :type, amount = :amount, date =  :date, update_at = now() WHERE id - :id";
+$sql = "UPDATE records SET title = :title, type = :type, amount = :amount, date = :date, updated_at = now() WHERE id = :id";
 
 $stmt = $pdo->prepare($sql);
 
